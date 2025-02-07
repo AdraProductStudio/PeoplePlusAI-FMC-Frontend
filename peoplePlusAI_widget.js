@@ -246,14 +246,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     outline: none;
                     font-size: 0.95rem;
                     resize: none;
-                    width: 100%;
+                    width: 90%;
                     font-size: 14px;
                     font-family: "Inter", serif;
                     box-shadow: none !important;
                     margin:0 18px;
                     height:40px;
-                    line-height: 40px;
+                    line-height: 20px;
+                    padding-top: 10px;
                     padding-left: 15px;
+                    padding-right: 50px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -264,10 +266,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     font-size: 16px;
                     line-height: 1.5em;
                     padding: 8px 60px 0px 15px;
+                    margin:0 0px;
+                    width: 95%;
                 }
                 .peoplePlusAI-widget #MR-send-btn {
                     position: absolute;
-                    right: 34px;
+                    right: 7%;
+                    top: 31.5px;
+                    font-size: 24px;
+                    cursor: pointer;
+                    align-self: center;
+                    opacity: 0.3;
+                    width:27px;
+                    height:27px;
+                    text-align:center;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color:#E7F1F3;
+                    border-radius: 35.526px;
+                }
+                .peoplePlusAI-widget.full-screen #MR-send-btn {
+                    position: absolute;
+                    right: 4%;
                     top: 31.5px;
                     font-size: 24px;
                     cursor: pointer;
@@ -377,6 +398,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     color: var(--incoming-msg-text);
                     font-size: 14px;
                     padding: 10px;
+                    padding-left : 18px;
+                    padding-right : 18px;
                     border-radius: 8px;
                     border-top-left-radius: 2px;
                     max-width: 100%;
@@ -399,6 +422,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     color: var(--incoming-msg-text);
                     font-size: 14px;
                     padding: 10px;
+                    padding-left : 18px;
+                    padding-right : 18px;
                     border-radius: 0px 12px 12px 12px;
                     max-width: 100%;
                     margin-left: 10px;
@@ -487,6 +512,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     background: var(--outgoing-msg-bg) !important;
                     color: var(--outgoing-msg-text) !important;
                     padding: 10px;
+                    padding-left : 18px;
+                    padding-right : 18px;
                     border-radius: 16px 16px 0px 16px;
                     font-size: 14px;
                     word-wrap: break-word;
@@ -558,10 +585,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 @media (max-width:490px){
                     .peoplePlusAI-widget {
-                        // width: 350px;
-                        // height:380px;
-                        // bottom: 71px;
-                        // right: 30px;
                         width: 90%;
                         height: 90%;
                         bottom: 0px;
@@ -726,30 +749,30 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="peoplePlusAI-widget-toggler">
                                 <p class="message-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" fill="none">
-  <g filter="url(#filter0_dd_288_17550)">
-    <rect x="32" y="30" width="60" height="60" rx="30" fill="#005C75"/>
-    <path d="M65.4102 40.1246H59.0773V54.9046H65.4102V40.1246ZM65.4102 63.4763H59.0773V57.1551H65.4102V63.4763ZM56.8219 57.1551H42.0137V63.4763H56.8219V57.1551Z" fill="white"/>
-    <path d="M59.0478 40H65.3807V54.78H59.0478V40ZM59.0478 63.3517H65.3807V57.0305H59.0478V63.3517ZM67.6361 57.0305H82.4443V63.3517H67.6361V57.0305Z" fill="white"/>
-    <path d="M59.0478 80.3853H65.3807V65.6053H59.0478V80.3853ZM67.6361 63.3548H82.4443V57.0336H67.6361V63.3548Z" fill="#D6D9D9"/>
-  </g>
-  <defs>
-    <filter id="filter0_dd_288_17550" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="1"/>
-      <feGaussianBlur stdDeviation="3"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_288_17550"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="2"/>
-      <feGaussianBlur stdDeviation="16"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
-      <feBlend mode="normal" in2="effect1_dropShadow_288_17550" result="effect2_dropShadow_288_17550"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_288_17550" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+                                <g filter="url(#filter0_dd_288_17550)">
+                                    <rect x="32" y="30" width="60" height="60" rx="30" fill="#005C75"/>
+                                    <path d="M65.4102 40.1246H59.0773V54.9046H65.4102V40.1246ZM65.4102 63.4763H59.0773V57.1551H65.4102V63.4763ZM56.8219 57.1551H42.0137V63.4763H56.8219V57.1551Z" fill="white"/>
+                                    <path d="M59.0478 40H65.3807V54.78H59.0478V40ZM59.0478 63.3517H65.3807V57.0305H59.0478V63.3517ZM67.6361 57.0305H82.4443V63.3517H67.6361V57.0305Z" fill="white"/>
+                                    <path d="M59.0478 80.3853H65.3807V65.6053H59.0478V80.3853ZM67.6361 63.3548H82.4443V57.0336H67.6361V63.3548Z" fill="#D6D9D9"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_dd_288_17550" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="1"/>
+                                    <feGaussianBlur stdDeviation="3"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_288_17550"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="16"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+                                    <feBlend mode="normal" in2="effect1_dropShadow_288_17550" result="effect2_dropShadow_288_17550"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_288_17550" result="shape"/>
+                                    </filter>
+                                </defs>
+                                </svg>
                                 </p>
                                 <p class="close-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" fill="none">
@@ -811,7 +834,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             const incomingMsgText = document.createElement("p");
             incomingMsgText.className = "placeholder-msg-text";
-            incomingMsgText.innerHTML = `Thinking...`;
+            incomingMsgText.innerHTML = `How may I assist you?...`;
             const incomingMsgTime = document.createElement("i");
             incomingMsgTime.className = "placeholder-msg-time";
             incomingMsgTime.innerText = formatAMPM(new Date());
@@ -918,104 +941,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
-                console.log(userInputTextValue)
-                var requiredParams;
                 var dataObject;
-
-                requiredParams = {
-                    client_name: "Unger - UK",
-                    service_name: "Unger - UK",
-                    language: "english",
-                    msg: userInputTextValue,
-                    flag: flag,
-                    session_id: randomNumber,
-                };
-
-                if(userInputTextValue){
-                    payload = {
-                        "model": "neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8",
-                        "messages": [
-                            {
-                                "role": "user",
-                                "content": userInputTextValue 
-                            }
-                        ]
-                    }
-                }else{
-                    payload = {
-                        "model": "neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8",
-                        "messages": [
-                            {
-                                "role": "user",
-                                "content": "Hi"
-                            }
-                        ]
-                    }
+                let payload = {
+                    "question": userInputTextValue
                 }
 
-
-                console.log("payload", payload)
-
-                // const url = "https://jsonplaceholder.typicode.com/users";
-                const url = 'https://johnaic.pplus.ai/api/chat/completions'
+                const url = 'https://findmycircular.pplus.ai/selfRAG'
 
                 setTimeout(async () => {
                     await fetch(url, {
                         method: "POST",
                         headers: {
-                            'accept': 'application/json',
-                            'Authorization': 'Bearer sk-f1c0b20f537e44f69b4c47cf4e0456e1',
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(payload),
                     })
                         .then((response) => {
-
                             if (!response.ok) {
                                 throw new Error(`HTTP error! status: ${response.status}`);
                             }
                             return response.json();
                         })
                         .then((data) => {
-
-                            console.log("response data", data)
-
-                            if (data.choices && data.choices.length > 0 && data.choices[0].message) {
-                                apiResponseMessage = data.choices[0].message.content;
-                            } else {
-                                console.error("Unexpected API response format:", data);
-                                apiResponseMessage = "Something went wrong.Please try again later!";
-                            }
-
+                            dataObject = data
                             toggler.style.pointerEvents = "all"
                             toggler.style.opacity = "1"
                             MRUserInputText.focus();
                             MRUserInputText.style.pointerEvents = "all"
                             MRUserInputText.style.opacity = "1"
-
-
-                            dataObject = data
-                            incomingMsgBox.className = "d-none"
                             if (incomingMsgBox2) {
                                 incomingMsgBox2.className = "d-none"
                             }
-                            if (data.error_code === 201) {
-                                apiResponseMessage = data.choices[0].message.content;
-                                clearTimeout(timerRef);
-                                randomNumber = randomNumberGenerate()
-                                setTimeout(() => {
-                                    handleToggler()
-                                }, 1500);
-                            }
-                            else {
-                                apiResponseMessage = data.choices[0].message.content;
+                            if (data.error_code === 200) {
+                                apiResponseMessage = data.data.answer;
+                            } else {
+                                console.error("Unexpected API response format:", data);
+                                apiResponseMessage = "Something went wrong.Please try again later!";
                             }
                         })
                         .catch((error) => {
+                            apiResponseMessage = "Something went wrong.Please try again later!";
                             console.error("Error:", error);
                         });
 
-                    if (Object.keys(dataObject).length) {
+                    if (dataObject === undefined) {
+                        incomingMsgBox2.className = "d-none"
+                        const incomingMsgBox = document.createElement("div");
+                        incomingMsgBox.className = "d-flex incoming-msg";
+                        const botIcon = document.createElement("img");
+                        botIcon.className = "bot-icon";
+                        botIcon.setAttribute(
+                            "src",
+                            "./outgoing-user-icon.png"
+                        );
+                        const incomingMsgText = document.createElement("div");
+                        incomingMsgText.className = "incoming-msg-text";
+                        incomingMsgText.innerHTML = `Something went wrong.Please try again later!`;
+                        let linkText = incomingMsgText.querySelector('a')
+                        if (linkText) {
+                            linkText.style.color = '#fff';
+                            linkText.style.textDecoration = 'underline';
+                        }
+                        const incomingMsgTime = document.createElement("i");
+                        incomingMsgTime.className = "incoming-msg-time";
+                        incomingMsgTime.innerText = formatAMPM(new Date());
+                        incomingMsgText.append(incomingMsgTime);
+                        const bottomChat = document.createElement("div");
+                        incomingMsgBox.append(botIcon, incomingMsgText, bottomChat);
+                        MRChatboxUl.append(incomingMsgBox);
+                        bottomChat.scrollIntoView({ behavior: "smooth" });
+                        toggler.style.pointerEvents = "all"
+                        toggler.style.opacity = "1"
+                        MRUserInputText.focus();
+                        MRUserInputText.style.pointerEvents = "all"
+                        MRUserInputText.style.opacity = "1"
+                    } else if (Object.keys(dataObject).length) {
                         const incomingMsgBox = document.createElement("div");
                         incomingMsgBox.className = "d-flex incoming-msg";
                         const botIcon = document.createElement("img");
@@ -1087,7 +1087,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "./outgoing-user-icon.png"
                 );
                 outgoingMsgBox.append(outgoingMsgText, userIcon);
-
                 const bottomChat = document.createElement("div");
                 MRChatboxUl.append(outgoingMsgBox, bottomChat);
                 bottomChat.scrollIntoView({ behavior: "smooth" });
@@ -1111,20 +1110,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
 
-
             const handleToggler = async () => {
                 document.getElementById('MR-userInputText').focus();
-
                 MRChatbotSection.classList.toggle("MR-show-chatbot");
                 incomingMsgBox.className = "d-flex placeholder-msg";
                 MRChatboxUl.append(incomingMsgBox);
 
                 if (MRChatbotSection.className.includes("MR-show-chatbot")) {
-                    (async () => {
-                        await getResponse();
-                    })();
-                    randomNumber = randomNumberGenerate()
-                    console.log(randomNumber)
+                    console.log("Chat opened")
                 } else {
                     peoplePlusAIWidget.classList.remove("full-screen");
                     fullscreenIcon.classList.add("show");
@@ -1133,7 +1126,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     MRUserInputText.value = ""
                     resetIdleTracking("close")
                 }
-
             };
 
             const resetIdleTracking = (value) => {
@@ -1141,8 +1133,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     clearTimeout(timerRef);
                 }
                 if (value === "close") {
-                    console.log("closed")
-                    startIdleTracking("close"); // Restart idle tracking
+                    console.log("Chat closed")
+                    startIdleTracking("close"); 
                 } else {
                     startIdleTracking("continous")
                 }
@@ -1158,7 +1150,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (response) {
                         resetIdleTracking("continous");
                     }
-                }, 5000); 
+                }, 5000);
             };
 
             toggler.addEventListener("click", handleToggler);
