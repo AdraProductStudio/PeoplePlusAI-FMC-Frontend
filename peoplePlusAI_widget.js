@@ -940,12 +940,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     MRChatboxUl.append(incomingMsgBox2);
 
                 }
-
                 var dataObject;
                 let payload = {
                     "question": userInputTextValue
                 }
-
+                
                 const url = 'https://findmycircular.pplus.ai/selfRAG'
 
                 setTimeout(async () => {
@@ -1117,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 MRChatboxUl.append(incomingMsgBox);
 
                 if (MRChatbotSection.className.includes("MR-show-chatbot")) {
-                    console.log("Chat opened")
+                    // console.log("Chat opened")
                 } else {
                     peoplePlusAIWidget.classList.remove("full-screen");
                     fullscreenIcon.classList.add("show");
@@ -1133,7 +1132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clearTimeout(timerRef);
                 }
                 if (value === "close") {
-                    console.log("Chat closed")
+                    // console.log("Chat closed")
                     startIdleTracking("close"); 
                 } else {
                     startIdleTracking("continous")
