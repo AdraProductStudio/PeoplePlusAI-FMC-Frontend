@@ -686,7 +686,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <path d="M111.633 20.0535C109.879 20.0535 108.552 19.3726 108.552 17.1422C108.552 14.1971 110.867 14.2485 112.859 14.2485H114.697V12.5288H112.416C109.216 12.5288 106.117 13.0227 106.117 17.1765C106.117 20.7854 108.535 21.8751 111.122 21.8751C112.739 21.8751 113.914 21.4326 114.697 20.8025V18.6916C114.135 19.492 113.199 20.0535 111.633 20.0535Z" fill="#D6D9D9"/>
                                             <path d="M124.655 15.0827H122.306V21.6539H126V19.7985H124.655V15.0827Z" fill="#D6D9D9"/>
                                             <path d="M8.15393 6.24694C6.60453 6.24694 5.48151 6.70662 4.69824 7.33666V9.63458C5.27688 8.68095 6.17911 8.11944 7.59243 8.11944C10.537 8.11944 11.4907 10.4859 11.4907 14.0606C11.4907 16.7535 10.9492 18.7602 9.42381 19.5865V21.743C12.0394 21.2432 13.908 19.0343 13.908 14.0606C13.908 8.32358 11.4226 6.24694 8.15393 6.24694Z" fill="#D6D9D9"/>
-                                            </svg>
+                                        </svg>
                                     </p>
                                   </div>
                             
@@ -798,7 +798,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             </filter>
                                         </defs>
                                     </svg>
-</p>
+                                </p>
                             </div>
                         </div>`;
 
@@ -834,7 +834,11 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             const incomingMsgText = document.createElement("p");
             incomingMsgText.className = "placeholder-msg-text";
-            incomingMsgText.innerHTML = `How may I assist you?...`;
+            incomingMsgText.innerHTML = 
+            `  Hello! This prototype has been trained on some RBI circulars on two topics: <br>
+        1) Credit facilities to minority communities <br>
+        2) Investments by Foreign Portfolio Investors. <br><br>
+        If you have any queries on either, type in the chat, and I will fetch you the most relevant information.`;
             const incomingMsgTime = document.createElement("i");
             incomingMsgTime.className = "placeholder-msg-time";
             incomingMsgTime.innerText = formatAMPM(new Date());
@@ -973,7 +977,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                             if (data.error_code === 200) {
                                 apiResponseMessage = data.data.answer;
-                            } else {
+                            } else if  (data.error_code === 500){
+                                console.error("Unexpected API response format:", data);
+                                apiResponseMessage = "The circular related to your question is not in our database. We are in the process of adding more circulars.";
+                              
+                            }else {
                                 console.error("Unexpected API response format:", data);
                                 apiResponseMessage = "Something went wrong.Please try again later!";
                             }
