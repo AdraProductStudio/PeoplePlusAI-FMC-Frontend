@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 .peoplePlusAI-widget .MR-header .full-screen-icon {
                     position: absolute;
-                    right: 32px;
+                    right: 50px;
                     width: 50px; /* Adjust the size as needed */
                     height: 50px; /* Adjust the size as needed */
                     display: none;
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .peoplePlusAI-widget .MR-header .close-icon {
                     position: absolute;
                     top: 50%;
-                    right: 20px;
+                    right: 30px;
                     transform: translateY(-50%);
                     color: #fff;
                     display: none;
@@ -252,9 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     box-shadow: none !important;
                     margin:0 18px;
                     height:40px;
-                    line-height: 20px;
+                    line-height: 18px;
                     padding-top: 10px;
-                    padding-left: 15px;
+                    padding-bottom: 10px;
+                    padding-left: 28px;
                     padding-right: 50px;
                     display: flex;
                     align-items: center;
@@ -277,6 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     cursor: pointer;
                     align-self: center;
                     opacity: 0.3;
+                    pointer-events: none;
                     width:27px;
                     height:27px;
                     text-align:center;
@@ -502,9 +504,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     float: right;
                     margin-top: 30px;
                     margin-right: 8px;
-                    // font-size: 12px;
-                    // font-family: "Inter", serif;
-                    // color: rgba(0, 0, 0, 0.45);
                 }
                 .peoplePlusAI-widget .outgoing-msg-text {
                     line-height: 1.5em;
@@ -531,6 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 /* media-queries */
+
 
                  @media (max-height:800px) {
                     .peoplePlusAI-widget {
@@ -583,6 +583,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
+                 @media (max-height:680px) {
+                    .peoplePlusAI-widget {
+                        position: fixed;
+                        bottom: 121px;
+                        right: 40px;
+                        background-color: #fff;
+                        width: 420px;
+                        height:400px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        transform: scale(0.5);
+                        opacity: 0;
+                        transition: all 0.2s linear;
+                        border: 1px solid rgb(228, 228, 228);
+                        z-index: 1000
+                    }
+                    .peoplePlusAI-widget.full-screen {
+                        position: fixed;
+                        bottom: 121px;
+                        right: 40px;
+                        background-color: #fff;
+                        width: 88%;
+                        height:400px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        transform: scale(0.5);
+                        opacity: 0;
+                        transition: all 0.2s linear;
+                        border: 1px solid rgb(228, 228, 228);
+                        z-index: 1000
+                    }
+                    .peoplePlusAI-widget .MR-chat-container{
+                        height: 291px;
+                    }
+                    .peoplePlusAI-widget .peoplePlusAI-chatbox-container {
+                        height: 291px;
+                        padding: 15px 20px 70px;
+                        overflow-y: scroll;
+                        background: url(./chat-background.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .MR-show-chatbot .peoplePlusAI-widget {
+                        transform: scale(1);
+                        opacity: 1;
+                        transition: all 0.2s linear;
+                    }
+
+                }
+
+                 
+
                 @media (max-width:490px){
                     .peoplePlusAI-widget {
                         width: 90%;
@@ -598,31 +651,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         right: 0;
                         z-index: 1;
                     }
-                    // .peoplePlusAI-widget .MR-chat-container{
-                    //     height: 271px;
-                    // }
-                    // .peoplePlusAI-widget .peoplePlusAI-chatbox-container {
-                    //     height: 271px;
-                    //     padding: 15px 20px 70px;
-                    //     overflow-y: scroll;
-                    //     background: url(./chat-background.png);
-                    //     background-position: center;
-                    //     background-repeat: no-repeat;
-                    //     background-size: cover;
-                    // }
-
-                    
+                  
                     .peoplePlusAI-widget .MR-header {
-                    background-color: var(--overall-theme);
-                    text-align: center;
-                    position: relative;
-                    height:68px;
-                    display: flex;
-                    align-items:center;
-                    justify-content:space-between;
-                    padding : 0 0 0 20px;
+                        background-color: var(--overall-theme);
+                        text-align: center;
+                        position: relative;
+                        height:68px;
+                        display: flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        padding : 0 0 0 20px;
                     }
                     .peoplePlusAI-widget .MR-header .close-icon {
+                        font-size:20px;
+                        opacity:90%;
                         display: block;
                     }
                     .peoplePlusAI-widget {
@@ -631,22 +673,41 @@ document.addEventListener("DOMContentLoaded", () => {
                     .MR-show-chatbot .peoplePlusAI-widget {
                         opacity: 1 !important;
                     }
-
                     .MR-show-chatbot .peoplePlusAI-widget-toggler {
-                    position: fixed;
-                    bottom: 100px;
-                    right: 35px;
-                    background-color: var(--overall-theme);
-                    color: #fff;
-                    border-radius: 50%;
-                    width: 50px;
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    z-index :999;
-                }
+                        position: fixed;
+                        bottom: 100px;
+                        right: 35px;
+                        background-color: var(--overall-theme);
+                        color: #fff;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        z-index :999;
+                    }
+                    .peoplePlusAI-widget .MR-header .full-screen-icon.show {
+                        position: absolute;
+                        right: 55px;
+                        width: 50px; 
+                        height: 50px; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor:pointer;
+                    }
+                    .peoplePlusAI-widget .MR-header .minimized-screen-icon.show {
+                        position: absolute;
+                        right: 55px;
+                        width: 50px; 
+                        height: 50px; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor:pointer;
+                    }
                 } 
                 `;
             document.head.appendChild(styleTag);
@@ -721,7 +782,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 </div>
                             
 
-                                <p class="MR close-icon peoplePlusAI-widget-close-icon">X</p>
+                                <p class="MR close-icon peoplePlusAI-widget-close-icon">✖</p>
                                 </header>
                                 <div class="MR-chat-container" id="MR-chat-container">
                                 <ul class="peoplePlusAI-chatbox-container" id="peoplePlusAI-chatbox-container">
@@ -830,15 +891,15 @@ document.addEventListener("DOMContentLoaded", () => {
             botIcon.className = "bot-icon";
             botIcon.setAttribute(
                 "src",
-                "./outgoing-user-icon.png"
+                "https://d1olhs2thomfrd.cloudfront.net/bot-icon.png"
             );
             const incomingMsgText = document.createElement("p");
             incomingMsgText.className = "placeholder-msg-text";
-            incomingMsgText.innerHTML = 
-            `  Hello! This prototype has been trained on some RBI circulars on two topics: <br>
-        1) Credit facilities to minority communities <br>
-        2) Investments by Foreign Portfolio Investors. <br><br>
-        If you have any queries on either, type in the chat, and I will fetch you the most relevant information.`;
+            incomingMsgText.innerHTML =
+                `  Hello! This prototype has been trained on some RBI circulars on two topics: <br>
+                1) Credit facilities to minority communities <br>
+                2) Investments by Foreign Portfolio Investors. <br><br>
+                If you have any queries on either, type in the chat, and I will fetch you the most relevant information.`;
             const incomingMsgTime = document.createElement("i");
             incomingMsgTime.className = "placeholder-msg-time";
             incomingMsgTime.innerText = formatAMPM(new Date());
@@ -929,7 +990,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     botIcon2.className = "bot-icon";
                     botIcon2.setAttribute(
                         "src",
-                        "./outgoing-user-icon.png"
+                        "https://d1olhs2thomfrd.cloudfront.net/bot-icon.png"
                     );
                     var incomingMsgText2 = document.createElement("p");
                     incomingMsgText2.className = "placeholder-msg-text";
@@ -948,7 +1009,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let payload = {
                     "question": userInputTextValue
                 }
-                
+
                 const url = 'https://findmycircular.pplus.ai/selfRAG'
 
                 setTimeout(async () => {
@@ -977,11 +1038,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                             if (data.error_code === 200) {
                                 apiResponseMessage = data.data.answer;
-                            } else if  (data.error_code === 500){
+                            } else if (data.error_code === 500) {
                                 console.error("Unexpected API response format:", data);
                                 apiResponseMessage = "The circular related to your question is not in our database. We are in the process of adding more circulars.";
-                              
-                            }else {
+
+                            } else {
                                 console.error("Unexpected API response format:", data);
                                 apiResponseMessage = "Something went wrong.Please try again later!";
                             }
@@ -999,7 +1060,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         botIcon.className = "bot-icon";
                         botIcon.setAttribute(
                             "src",
-                            "./outgoing-user-icon.png"
+                            "https://d1olhs2thomfrd.cloudfront.net/bot-icon.png"
                         );
                         const incomingMsgText = document.createElement("div");
                         incomingMsgText.className = "incoming-msg-text";
@@ -1029,7 +1090,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         botIcon.className = "bot-icon";
                         botIcon.setAttribute(
                             "src",
-                            "./outgoing-user-icon.png"
+                            "https://d1olhs2thomfrd.cloudfront.net/bot-icon.png"
                         );
                         const incomingMsgText = document.createElement("div");
                         incomingMsgText.className = "incoming-msg-text";
@@ -1054,7 +1115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         botIcon.className = "bot-icon";
                         botIcon.setAttribute(
                             "src",
-                            "./outgoing-user-icon.png"
+                            "https://d1olhs2thomfrd.cloudfront.net/bot-icon.png"
                         );
                         const incomingMsgText = document.createElement("p");
                         incomingMsgText.className = "incoming-msg-text";
@@ -1091,7 +1152,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 userIcon.className = "user-icon";
                 userIcon.setAttribute(
                     "src",
-                    "./outgoing-user-icon.png"
+                    "https://d1olhs2thomfrd.cloudfront.net/user-icon.png"
                 );
                 outgoingMsgBox.append(outgoingMsgText, userIcon);
                 const bottomChat = document.createElement("div");
@@ -1104,18 +1165,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 0);
             }
 
+
             MRSendbtnSpan.addEventListener('click', handleSendClick)
-            MRUserInputText.addEventListener('keypress', (e) => {
-                if (e.key === "Enter") {
-                    if (MRUserInputText.value.trim() === "") {
-                        e.preventDefault();
-                        return;
-                    } else {
-                        e.preventDefault();
-                        handleSendClick();
-                    }
+            MRUserInputText.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" && e.shiftKey) {
+                    return;
                 }
-            })
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    if (MRUserInputText.value.trim() === "") {
+                        return;
+                    }
+                    handleSendClick();
+                }
+            });
+            
 
             const handleToggler = async () => {
                 document.getElementById('MR-userInputText').focus();
@@ -1141,7 +1205,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 if (value === "close") {
                     // console.log("Chat closed")
-                    startIdleTracking("close"); 
+                    startIdleTracking("close");
                 } else {
                     startIdleTracking("continous")
                 }
