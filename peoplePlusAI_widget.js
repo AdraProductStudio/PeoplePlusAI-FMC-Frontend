@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     height: 541px;
                     padding: 15px 20px 70px;
                     overflow-y: scroll;
-                    background: url(./chat-background.png);
+                    background: url("https://d1olhs2thomfrd.cloudfront.net/chatBackground.png");
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     height: 100%;
                     padding: 15px 20px 70px;
                     overflow-y: scroll;
-                    background: url(./chat-background.png);
+                    background: url("https://d1olhs2thomfrd.cloudfront.net/chatBackground.png");
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -564,16 +564,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         z-index: 1000
                     }
                     .peoplePlusAI-widget .MR-chat-container{
-                        height: 441px;
+                      height: 80%;
                     }
                     .peoplePlusAI-widget .peoplePlusAI-chatbox-container {
-                        height: 441px;
                         padding: 15px 20px 70px;
                         overflow-y: scroll;
-                        background: url(./chat-background.png);
+                        background: url("https://d1olhs2thomfrd.cloudfront.net/chatBackground.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
+                        height: 100%;
                     }
                     .MR-show-chatbot .peoplePlusAI-widget {
                         transform: scale(1);
@@ -615,13 +615,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         z-index: 1000
                     }
                     .peoplePlusAI-widget .MR-chat-container{
-                        height: 291px;
+                       height: 80%;
                     }
                     .peoplePlusAI-widget .peoplePlusAI-chatbox-container {
-                        height: 291px;
+                        height: 100%;
                         padding: 15px 20px 70px;
                         overflow-y: scroll;
-                        background: url(./chat-background.png);
+                        background: url("https://d1olhs2thomfrd.cloudfront.net/chatBackground.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -633,8 +633,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                 }
-
-                 
 
                 @media (max-width:490px){
                     .peoplePlusAI-widget {
