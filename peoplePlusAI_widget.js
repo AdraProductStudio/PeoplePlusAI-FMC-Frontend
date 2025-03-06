@@ -1007,7 +1007,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 var dataObject;
                 let payload = {
-                    "question": userInputTextValue
+                    "question": userInputTextValue.trim()
                 }
 
                 const url = 'https://findmycircular.pplus.ai/selfRAG'
@@ -1052,6 +1052,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             console.error("Error:", error);
                         });
 
+                    console.log("apiResponseMessage", apiResponseMessage)
+
+
                     if (dataObject === undefined) {
                         incomingMsgBox2.className = "d-none"
                         const incomingMsgBox = document.createElement("div");
@@ -1094,7 +1097,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         );
                         const incomingMsgText = document.createElement("div");
                         incomingMsgText.className = "incoming-msg-text";
-                        incomingMsgText.innerHTML = `${apiResponseMessage}`;
+                        incomingMsgText.innerHTML = apiResponseMessage.replace(/\n\n/g, "<br><br>");
                         let linkText = incomingMsgText.querySelector('a')
                         if (linkText) {
                             linkText.style.color = '#fff';
@@ -1138,7 +1141,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const outgoingMsgText = document.createElement("p");
                 const userIcon = document.createElement("img");
                 outgoingMsgText.className = "outgoing-msg-text";
-                outgoingMsgText.innerText = MRUserInputText.value;
+                outgoingMsgText.innerText = MRUserInputText.value.trim();
                 const outgoingMsgTime = document.createElement("i");
                 outgoingMsgTime.className = "outgoing-msg-time";
                 outgoingMsgTime.innerText = formatAMPM(new Date());
@@ -1179,7 +1182,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     handleSendClick();
                 }
             });
-            
+
 
             const handleToggler = async () => {
                 document.getElementById('MR-userInputText').focus();
