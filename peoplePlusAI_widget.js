@@ -1008,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "question": userInputTextValue.trim()
                 }
 
-                const url = 'https://findmycircular.pplus.ai/selfRAG'
+                const url = 'https://fmcapi.adraproductstudio.com/selfRAG'
 
                 setTimeout(async () => {
                     await fetch(url, {
@@ -1034,12 +1034,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             if (incomingMsgBox2) {
                                 incomingMsgBox2.className = "d-none"
                             }
+
                             if (data.error_code === 200) {
                                 apiResponseMessage = data.data.answer;
                             } else if (data.error_code === 500) {
                                 console.error("Unexpected API response format:", data);
                                 apiResponseMessage = "The circular related to your question is not in our database. We are in the process of adding more circulars.";
-
                             } else {
                                 console.error("Unexpected API response format:", data);
                                 apiResponseMessage = "Something went wrong.Please try again later!";
@@ -1049,9 +1049,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             apiResponseMessage = "Something went wrong.Please try again later!";
                             console.error("Error:", error);
                         });
-
-                    console.log("apiResponseMessage", apiResponseMessage)
-
 
                     if (dataObject === undefined) {
                         incomingMsgBox2.className = "d-none"
@@ -1095,7 +1092,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         );
                         const incomingMsgText = document.createElement("div");
                         incomingMsgText.className = "incoming-msg-text";
-                        incomingMsgText.innerHTML = apiResponseMessage.replace(/\n\n/g, "<br><br>");
+                        incomingMsgText.innerHTML = apiResponseMessage.replace(/\n/g, "<br>");
                         let linkText = incomingMsgText.querySelector('a')
                         if (linkText) {
                             linkText.style.color = '#fff';
